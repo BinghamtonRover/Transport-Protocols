@@ -17,4 +17,4 @@ target_link_libraries(network PUBLIC ${Boost_LIBRARIES} ${Protobuf_LIBRARIES} ev
 target_compile_features(network PUBLIC cxx_std_17)
 
 add_subdirectory(tests)
-add_subdirectory(rover_system_messages)
+add_subdirectory(proto_gen)
