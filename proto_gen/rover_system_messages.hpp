@@ -1,6 +1,6 @@
 #pragma once
 
-#include <messages.hpp>
+#include "../messages.hpp"
 #include <video_control.pb.h>
 #include <drive_control.pb.h>
 #include <sensor_control.pb.h>
