@@ -1,3 +1,6 @@
+project(rover_transport)
+# Note: this is the version of CMake I have if you want this to work with a lower version feel free to lower the version number here and figure it out
+cmake_minimum_required(VERSION 3.24)
 find_package(Protobuf REQUIRED)
 add_library(network network.hpp network.cpp network_util.hpp messages.hpp messages.cpp stream.hpp stream.cpp)
 

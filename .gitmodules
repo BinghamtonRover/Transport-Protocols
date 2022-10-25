@@ -1,3 +1,6 @@
 [submodule "rover-api"]
 	path = rover-api
 	url = https://github.com/BinghamtonRover/rover-api
+[submodule "rover_system_messages"]
+	path = rover_system_messages
+	url = https://github.com/BinghamtonRover/Protobuf
