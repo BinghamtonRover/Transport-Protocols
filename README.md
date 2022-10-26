@@ -1,5 +1,9 @@
 # Rover Network Library
 This is a message-passing library that uses UDP, which performs better than TCP on the rover system since it does not require establishing two-way connections. The library uses Google Protocol Buffers for serializing and deserializing messages.
+
+## Building
+Before you try to build make sure all git submodules are cloned. To build this project on linux you'll need to have CMake, a C++ compiler, make, boost and the protobuf compiler installed, to install all of these on debian(and probably ubuntu/raspbian as well) you can run `sudo apt install gcc g++ make cmake protobuf-compiler libboost-dev`(note gcc is here for futureproofing against the addition of C code and gcc and g++ can be replaced by clang and clang+). Then to build you can run `cmake .` and `make` in the repo's root directory.
+
 ## Usage
 View the provided examples in `apps` for additional help. They are not built by default: set `BUILD_NETWORK_APPS=ON` with CMake to enable. This can be done without regenerating all build files by running `cmake -B build -DBUILD_NETWORK_APPS=ON` in the repo root (assuming BurtOS-2/build is the desired build directory). The executables are placed in `build/bin`.
 ### Using in a new program

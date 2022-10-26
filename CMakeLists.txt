@@ -1,10 +1,10 @@
 project(rover_transport)
-# Note: this is the version of CMake I have if you want this to work with a lower version feel free to lower the version number here and figure it out
-cmake_minimum_required(VERSION 3.24)
-find_package(Protobuf REQUIRED)
+# Note: if you want this to work with a lower version feel free to lower the version number here and figure it out
+cmake_minimum_required(VERSION 3.18)
 add_library(network network.hpp network.cpp network_util.hpp messages.hpp messages.cpp stream.hpp stream.cpp)
 
 find_package(Boost REQUIRED)
+find_package(Protobuf REQUIRED)
 if (WIN32)
 	message(STATUS "Boost target is WIN32")
 	target_link_libraries(network PUBLIC wsock32 ws2_32)
